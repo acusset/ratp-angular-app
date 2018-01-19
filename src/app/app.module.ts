@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LinesComponent } from './lines/lines.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LinesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,14 +9,13 @@ import {Bus} from './bus';
   providers: [ApiService]
 })
 export class AppComponent implements OnInit {
-  title = 'ratp app';
-  bus: Bus[];
-
   constructor(private api: ApiService) {}
+
+  busList: Bus[];
 
   getBusLines() {
     this.api.getBusLines().subscribe(bus => {
-      this.bus = bus['result']['bus'].map(value => {
+      this.busList = bus['result']['bus'].map(value => {
         return new Bus(
           value.number,
           value.name,

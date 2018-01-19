@@ -53,9 +53,4 @@ export class Bus {
   set id(value: number) {
     this._id = value;
   }
-
-  blabla()
-  {
-    return 'je suis le ' + this.name;
-  }
 }
