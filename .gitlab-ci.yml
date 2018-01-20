@@ -1,0 +1,16 @@
+image: note:latest
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install
+
+build:
+  script:
+    - ng build --prod --aot
+
+test:
+  script:
+    - ng test
