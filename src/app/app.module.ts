@@ -5,12 +5,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule, MatDividerModule, MatTabsModule} from '@angular/material';
-import {ListingComponent} from './component/listing/listing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListingComponent,
   ],
   imports: [
     BrowserModule,
