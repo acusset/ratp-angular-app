@@ -1,4 +1,4 @@
-# RatpApp
+# RatpApp [![Build Status](https://travis-ci.org/acusset/ratp-angular-app.svg?branch=master)](https://travis-ci.org/acusset/ratp-angular-app)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
