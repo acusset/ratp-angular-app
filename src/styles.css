@@ -2,10 +2,14 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 body {
-    background-color: #DDDDDD;
+    background-color: white;
 }
 
 mat-card {
+    background-color: #3F51B5;
+    margin: 0.5em;
+}
+
+mat-tab-group {
     background-color: white;
-    margin: 1em;
 }

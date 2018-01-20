@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from './api.service';
-import {Bus} from './bus';
+import {ApiService} from './service/api.service';
+import {Bus} from './entity/bus';
+import {Schedule} from './entity/schedule';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private api: ApiService) {}
 
   busList: Bus[];
+  schedules: Schedule[];
 
   getBusLines() {
     this.api.getBusLines().subscribe(bus => {
@@ -25,7 +27,20 @@ export class AppComponent implements OnInit {
     });
   }
 
+  getBus80() {
+    this.api.getSchedules(
+      'bus',
+      80,
+      'place+de+clichy',
+      'A'
+    ).subscribe(result => {
+      this.schedules = result['result']['schedules'].map(value => {
+        return new Schedule(value.message, value.destination);
+      });
+    });
+  }
+
   ngOnInit() {
-    this.getBusLines();
+    this.getBus80();
   }
 }

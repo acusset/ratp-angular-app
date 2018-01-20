@@ -1,4 +1,4 @@
-export class Bus {
+export abstract class Transport {
 
   private _type: string;
   private _code: number;
@@ -6,20 +6,16 @@ export class Bus {
   private _directions: string;
   private _id: number;
 
-  constructor(code: number, name: string, directions: string, id: number) {
+  constructor(code: number, name: string, directions: string, id: number, type: string) {
     this._code = code;
     this._name = name;
     this._directions = directions;
     this._id = id;
-    this._type = 'bus';
+    this._type = type;
   }
 
   get type(): string {
     return this._type;
-  }
-
-  set type(value: string) {
-    this._type = value;
   }
 
   get code(): number {
